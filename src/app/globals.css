@@ -135,7 +135,6 @@ dialog {
   color: #F0F0EC;
 } */
 
-/* Barra de rolagem para todos os navegadores baseados em WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 10px; /* largura da barra */
   height: 10px; /* altura da barra horizontal, se houver */
