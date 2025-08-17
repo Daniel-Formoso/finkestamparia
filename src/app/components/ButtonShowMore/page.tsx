@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 const products = [
   {
@@ -123,13 +124,13 @@ export default function Products() {
                 </li>
               ))}
             </ul>
-            <a
+            <Link
               href={product.href}
               aria-describedby={product.id}
               className="mt-4 block rounded-md bg-[#EFA531] border-2 border-[#efa531] px-3.5 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-white hover:text-[#EFA531]"
             >
               Peça Já o Seu!
-            </a>
+            </Link>
           </div>
         ))}
       </div>

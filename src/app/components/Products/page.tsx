@@ -2,6 +2,7 @@
 
 import { CheckIcon } from "@heroicons/react/20/solid";
 import ButtonShowMore from "../ButtonShowMore/page";
+import Link from "next/link";
 
 const products = [
   {
@@ -124,13 +125,13 @@ export default function Products() {
                 </li>
               ))}
             </ul>
-            <a
+            <Link
               href={product.href}
               aria-describedby={product.id}
               className="bg-[#EFA531] border-2 hover:bg-[#EFA531] tn btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] mt-4 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold sm:mt-1 transition"
             >
               Peça Já o Seu!
-            </a>
+            </Link>
           </div>
         ))}
       </div>

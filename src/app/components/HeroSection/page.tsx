@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const navigation = [
   { name: "Nossos Diferenciais", href: "#diferenciais" },
@@ -24,13 +25,13 @@ export default function HeroSection() {
           className="flex items-center justify-between p-6 lg:px-8"
         >
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="-m-1.5 p-1.5">
               <img
                 alt="logo loja menu principal"
                 src="./header/logo-texto-branco.png"
                 className="w-30"
               />
-            </a>
+            </Link>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -43,14 +44,14 @@ export default function HeroSection() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12 h-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-sm font-regular text-white py-2 hover:border-b-2
                  border-[#EFA531]"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>
@@ -62,13 +63,13 @@ export default function HeroSection() {
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <Link href="#" className="-m-1.5 p-1.5">
                 <img
                   alt="logo loja menu mobile"
                   src="./header/logo-texto-azul.png"
                   className="w-30"
                 />
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
@@ -81,13 +82,13 @@ export default function HeroSection() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -127,15 +128,15 @@ export default function HeroSection() {
               Criamos canecas, azulejos, squeezes e muito mais, feitos sob medida para refletir o seu estilo. Surpreenda com presentes únicos ou dê mais personalidade ao seu dia a dia.
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-8">
-              <a
+              <Link
                 href="#contato"
                 className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10 animate-fade-right animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both"
               >
                 Já Quero!
-              </a>
-              <a href="#produtos" className="text-sm/6 font-semibold text-gray-400 hover:text-[#EFA531] animate-fade-left animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both">
+              </Link>
+              <Link href="#produtos" className="text-sm/6 font-semibold text-gray-400 hover:text-[#EFA531] animate-fade-left animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both">
                 Ver modelos <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
