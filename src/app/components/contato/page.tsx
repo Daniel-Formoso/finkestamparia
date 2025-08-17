@@ -261,8 +261,7 @@ export default function Contact() {
               className="text-xs/6 text-gray-400"
             >
               Ao marcar esta opção, você concorda com as nossas{" "}
-              <Link
-                href="../pages/Privacy"
+              <Link href="/privacidade"
                 className="font-semibold whitespace-nowrap text-[#EFA531] hover:text-[#E1AF65] hover:border-b-2 transition duration-200 ease-in-out"
               >
                 políticas de privacidade

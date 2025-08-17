@@ -10,7 +10,7 @@ export default function Footer() {
           <Image
             src="/header/logo-texto-branco.webp"
             alt="FINK Estamparia Logo"
-            width={180}
+            width={120}
             height={60}
             className="mb-4"
           />
@@ -24,10 +24,10 @@ export default function Footer() {
         <nav>
           <div className="grid grid-flow-col gap-4">
             <a
-               href="https://www.instagram.com/finkestamparia/"
+              href="https://www.instagram.com/finkestamparia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white xl:hover:text-[#EFA531] transition duration-200 ease-in-out"
+              className="text-white xl:hover:text-[#EFA531] transition duration-200 ease-in-out xl:cursor-pointer"
             >
               <FaInstagram size={30} />
             </a>

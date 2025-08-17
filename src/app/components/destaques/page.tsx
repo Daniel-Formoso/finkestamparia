@@ -12,7 +12,7 @@ const navigation = [
   { name: "Produtos", href: "#produtos" },
   { name: "Clientes & Trabalhos", href: "#clientestrabalhos" },
   { name: "Personalize o Seu!", href: "#contato" },
-  { name: "Políticas e Privacidade", href: "../pages/politicas-privacidade" },
+  { name: "Políticas e Privacidade", href: "/privacidade" },
 ];
 
 export default function HeroSection() {
@@ -68,8 +68,8 @@ export default function HeroSection() {
                 <Image
                   alt="logo loja menu mobile"
                   src="./header/logo-texto-azul.webp"
-                  width={150}    // largura em pixels
-                  height={50} 
+                  width={150} // largura em pixels
+                  height={50}
                 />
               </Link>
               <button
