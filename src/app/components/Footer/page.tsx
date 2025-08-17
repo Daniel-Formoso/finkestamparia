@@ -1,12 +1,13 @@
 import { FaInstagram } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <>
       <footer className="footer footer-horizontal footer-center bg-[#101828] text-primary-content p-10">
         <aside>
-          <img
+          <Image
             src="/header/logo-texto-branco.webp"
             alt="FINK Estamparia Logo"
             className="w-30 mb-4"

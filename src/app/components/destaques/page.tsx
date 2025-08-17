@@ -27,7 +27,7 @@ export default function HeroSection() {
         >
           <div className="flex lg:flex-1">
             <Link href="#" className="-m-1.5 p-1.5">
-              <img
+              <Image
                 alt="logo loja menu principal"
                 src="./header/logo-texto-branco.webp"
                 className="w-30"
