@@ -8,21 +8,27 @@ const links = [
   { name: "Nos Siga para Novidades", href: "https://www.instagram.com/finkestamparia/" },
 ];
 
-  const stats = [
-{ name: "Mais unidades, mais desconto", value: "+10 peças" }, 
-    { name: "Envio rápido para todo Brasil", value: "48h" },
-    { name: "Prática e confiável", value: "Compra segura" },
-    { name: "Design único em cada peça", value: "100% originais" },
-  ];
+const stats = [
+  { name: "Mais unidades, mais desconto", value: "+10 peças" },
+  { name: "Envio rápido para todo Brasil", value: "48h" },
+  { name: "Prática e confiável", value: "Compra segura" },
+  { name: "Design único em cada peça", value: "100% originais" },
+];
 
 export default function AboutUs() {
   return (
-    <div id="sobre" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-      <Image
-        alt="pessoa trabalhando para desenvolver os produtos"
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-        className="absolute inset-0 -z-10 size-full object-cover object-right md:object-center"
-      />
+    <section id="sobre" className="relative isolate overflow-hidden bg-gray-900">
+      {/* Imagem de fundo */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+          alt="pessoa trabalhando para desenvolver os produtos"
+          fill
+          style={{ objectFit: "cover", objectPosition: "right" }}
+        />
+      </div>
+
+      {/* Elemento decorativo */}
       <div
         aria-hidden="true"
         className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:-top-112 sm:ml-16 sm:translate-x-0"
@@ -36,33 +42,46 @@ export default function AboutUs() {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      {/* Conteúdo principal */}
+      <div className="relative py-24 sm:py-32 px-6 lg:px-8 mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="relative italic rounded-full py-1 text-sm/6 font-semibold text-[#EFA531]">
             Sobre Nós
           </h2>
-       <h2 className="w-full text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          <span className="text-[#EFA531]">Nossa</span> história... 
-        </h2>
+          <h2 className="w-full text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            <span className="text-[#EFA531]">Nossa</span> história...
+          </h2>
           <p className="mt-8 text-lg font-regular text-gray-400 sm:text-base/8">
-            Na FINK Estamparia, transformamos ideias em produtos incríveis. Cada peça é feita com cuidado e atenção aos detalhes, garantindo qualidade e personalidade.
+            Na FINK Estamparia, transformamos ideias em produtos incríveis. Cada
+            peça é feita com cuidado e atenção aos detalhes, garantindo qualidade
+            e personalidade.
           </p>
           <p className="mt-8 text-lg font-regular text-gray-400 sm:text-base/8">
-            Nosso objetivo é unir criatividade e inovação para que você receba produtos que realmente se destacam. Canecas, squeezes, azulejos e muito mais, tudo personalizado do seu jeito.
+            Nosso objetivo é unir criatividade e inovação para que você receba
+            produtos que realmente se destacam. Canecas, squeezes, azulejos e
+            muito mais, tudo personalizado do seu jeito.
           </p>
           <p className="mt-8 text-lg font-regular text-gray-400 sm:text-base/8">
-            Aqui, cada item é único e pensado para contar a sua história. Deixe sua marca com peças que fazem a diferença no dia a dia.
+            Aqui, cada item é único e pensado para contar a sua história. Deixe
+            sua marca com peças que fazem a diferença no dia a dia.
           </p>
         </div>
+
+        {/* Links */}
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 lg:gap-x-0 w-full lg:w-120">
             {links.map((link) => (
-              <Link key={link.name} href={link.href} className="xl:hover:text-[#EFA531] transition w-60 lg:w-60">
+              <Link
+                key={link.name}
+                href={link.href}
+                className="xl:hover:text-[#EFA531] transition w-60 lg:w-60"
+              >
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </Link>
             ))}
           </div>
 
+          {/* Stats */}
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse gap-1">
@@ -75,6 +94,6 @@ export default function AboutUs() {
           </dl>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
