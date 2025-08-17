@@ -3,7 +3,14 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* outras config options aqui */
   images: {
-    domains: ["images.unsplash.com"], // libera o domínio da sua imagem externa
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",        // deixa vazio se não houver porta específica
+        pathname: "/**", // permite qualquer caminho dentro do domínio
+      },
+    ],
   },
 };
 
