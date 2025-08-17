@@ -123,3 +123,16 @@ html {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* O backdrop atrás do modal */
+dialog::backdrop {
+  background-color: red; /* escurece a página atrás */
+}
+
+/* O próprio modal */
+dialog {
+  /* background-color: #1D232A; fundo escuro do modal */
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  color: #F0F0EC;
+}
