@@ -24,7 +24,7 @@ export default function Footer() {
         <nav>
           <div className="grid grid-flow-col gap-4">
             <a
-              href="https://www.instagram.com/finkestamparia/"
+               href="https://www.instagram.com/finkestamparia/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white xl:hover:text-[#EFA531] transition duration-200 ease-in-out"
