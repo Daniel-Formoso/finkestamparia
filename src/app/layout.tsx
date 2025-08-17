@@ -8,8 +8,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Fink Estampparia",
-  description: "A sua loja de personalização!",
+  title: "FINK Estamparia – Loja de Personalizados",
+  description: "FINK Estamparia – Canecas, squeezes, azulejos e outros produtos personalizados com design exclusivo.",
 };
 
 export default function RootLayout({

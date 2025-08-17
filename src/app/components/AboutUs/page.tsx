@@ -5,12 +5,12 @@ const links = [
   { name: "Nos Siga para Novidades", href: "https://www.instagram.com/finkestamparia/" },
 ];
 
-const stats = [
-  { name: "Frete grátis", value: "R$ 249,90+" },
-  { name: "Atendimento disponível", value: "24/7" },
-  { name: "Tempo médio de preparo", value: "48h" },
-  { name: "Pedidos", value: "100% originais" },
-];
+  const stats = [
+{ name: "Mais unidades, mais desconto", value: "+10 peças" }, 
+    { name: "Envio rápido para todo Brasil", value: "48h" },
+    { name: "Prática e confiável", value: "Compra segura" },
+    { name: "Design único em cada peça", value: "100% originais" },
+  ];
 
 export default function AboutUs() {
   return (
@@ -38,25 +38,17 @@ export default function AboutUs() {
           <h2 className="relative italic rounded-full py-1 text-sm/6 font-semibold text-[#EFA531]">
             Sobre Nós
           </h2>
-          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Conheça a gente!
-          </h2>
+       <h2 className="w-full text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
+          <span className="text-[#EFA531]">Nossa</span> história... 
+        </h2>
           <p className="mt-8 text-lg font-regular text-gray-400 sm:text-base/8">
-            Na Fink Estamparia, acreditamos que cada detalhe pode refletir quem
-            você é. Por isso, oferecemos produtos personalizados de qualidade,
-            como canecas, squeezes, camisetas, azulejos e muito mais — tudo
-            pensado para dar vida às suas ideias com rapidez e eficiência.
+            Na FINK Estamparia, transformamos ideias em produtos incríveis. Cada peça é feita com cuidado e atenção aos detalhes, garantindo qualidade e personalidade.
           </p>
           <p className="mt-8 text-lg font-regular text-gray-400 sm:text-base/8">
-            Nossa história começou de forma simples: a prensa estava parada, e a
-            vontade de criar falou mais alto. Desde então, trabalhamos para
-            levar a personalização para todo mundo, transformando objetos do dia
-            a dia em peças únicas que carregam seu estilo e personalidade.
+            Nosso objetivo é unir criatividade e inovação para que você receba produtos que realmente se destacam. Canecas, squeezes, azulejos e muito mais, tudo personalizado do seu jeito.
           </p>
           <p className="mt-8 text-lg font-regular text-gray-400 sm:text-base/8">
-            Aqui, o simples vira especial e o seu estilo é o que manda. Sem
-            frescura, só criatividade e entrega rápida para você aproveitar sem
-            demora.
+            Aqui, cada item é único e pensado para contar a sua história. Deixe sua marca com peças que fazem a diferença no dia a dia.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">

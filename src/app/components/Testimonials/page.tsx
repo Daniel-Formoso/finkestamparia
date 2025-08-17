@@ -5,60 +5,48 @@ import { useState, useEffect } from "react";
 export default function Testimonials() {
   const testimonials = [
     {
-      text: "“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae.”",
+      text: "Recebi minha caneca personalizada super rápido e a qualidade é excelente!",
+      name: "Lucas",
+      city: "Rio de Janeiro, RJ",
+      rating: 5,
+    },
+    {
+      text: "A caneca de chopp ficou incrível, estampa perfeita e chegou antes do prazo.",
+      name: "Rafael",
+      city: "São Gonçalo, RJ",
+      rating: 5,
+    },
+    {
+      text: "Fiz um pedido de squeezes personalizados e todos ficaram perfeitos. Recomendo demais!",
+      name: "Camila",
+      city: "Petrópolis, RJ",
+      rating: 5,
+    },
+    {
+      text: "O azulejo personalizado ficou lindo! Cada detalhe da estampa saiu perfeito.",
       name: "Daniel",
       city: "Vassouras, RJ",
       rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     {
-      text: "“Outro depoimento incrível de cliente satisfeito com o serviço da empresa.”",
+      text: "A caneca que pedi veio com ótima qualidade e a entrega foi super rápida.",
       name: "Beatriz",
       city: "Nova Iguaçu, RJ",
       rating: 4,
-      image:
-        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     {
-      text: "“Mais um feedback positivo que mostra a qualidade do nosso produto.”",
-      name: "Wallace",
-      city: "Rio de Janeiro, RJ",
+      text: "Adorei a qualidade e a atenção aos detalhes! Recomendo demais.",
+      name: "Rafaela",
+      city: "São Paulo, SP",
       rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae.”",
-      name: "Danisssel",
-      city: "Vassouras, RJ",
-      rating: 4,
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Outro depoimento incrível de cliente satisfeito com o serviço da empresa.”",
-      name: "Beatrsssaiz",
-      city: "Nova Iguaçu, RJ",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Mais um feedback positivo que mostra a qualidade do nosso produto.”",
-      name: "Walsssslace",
-      city: "Rio de Janeiro, RJ",
-      rating: 5,
-      image:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+    }
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
   const [cardsPerPage, setCardsPerPage] = useState(1);
   const [containerPadding, setContainerPadding] = useState("px-6");
 
-  // Ajusta cards por página e padding de acordo com tamanho da tela
+  // Ajusta cards por página e padding
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -83,44 +71,34 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
-  const translateX = currentPage * 100;
+  const maxPage = Math.max(0, testimonials.length - cardsPerPage);
+  const translateX = currentPage * (100 / cardsPerPage);
 
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
+  // Autoplay
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPage((prev) => (prev >= maxPage ? 0 : prev + 1));
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [maxPage]);
 
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
-  };
+  const nextPage = () => setCurrentPage((prev) => (prev >= maxPage ? 0 : prev + 1));
+  const prevPage = () => setCurrentPage((prev) => (prev <= 0 ? maxPage : prev - 1));
 
   return (
-    <section id="clientestrabalhos"
+    <section
+      id="clientestrabalhos"
       className={`relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 lg:px-8 ${containerPadding}`}
     >
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="relative italic rounded-full py-1 text-sm/6 font-semibold text-[#EFA531]">
           Produtos
         </h2>
-        <p className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-          Veja a opinião de quem confiou em nós!
-        </p>
+        <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
+          Veja a opnião de quem <span className="text-[#EFA531]">confiou</span> em nós!
+        </h2>
       </div>
 
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      >
-        <div
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-          className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-gradient-to-tr from-[#E5E5E5] via-[#F7F7F7] to-[#CCCCCC] opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"
-        />
-      </div>
-
-      {/* Carrossel */}
       <div className="relative mt-12 overflow-hidden xl:mx-24 2xl:mx-70 sm:mx-28 md:mx-10">
         <div
           className="flex transition-transform duration-700 ease-in-out"
@@ -137,48 +115,36 @@ export default function Testimonials() {
                   : "xl:w-1/3"
               }`}
             >
-              <figure className="border border-[#EFA531]/40 bg-gray-800 md:p-4 sm:p-10 lg:p-6 rounded-2xl h-[350px] flex flex-col justify-between m-auto p-4">
-                <blockquote className="text-center text-base/8 font-medium text-white sm:text-sm/9">
+              <figure className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border-l-4 border-[#EFA531] rounded-2xl h-[300px] flex flex-col justify-between p-6 shadow-lg">
+                <div className="text-[#EFA531] text-3xl">“</div>
+                <blockquote className="text-left text-base/8 font-medium text-white flex-grow flex flex-col justify-between px-2">
                   <p>{t.text}</p>
+                  <div className="text-[#EFA531] text-3xl self-end">”</div>
                 </blockquote>
-                <figcaption className="mt-4 flex flex-col items-center">
-                  <img
-                    src={t.image}
-                    alt={t.name}
-                    className="w-15 h-15 rounded-full object-cover"
-                  />
-                  {/* Avaliação por estrelas */}
-                  <div className="mt-2 flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className={`w-4 h-4 ${
-                          i < t.rating ? "text-yellow-400" : "text-gray-500"
-                        }`}
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.049 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
-                      </svg>
-                    ))}
+                <div className="mt-4 flex items-center space-x-4">
+                  <div className="w-10 h-10 rounded-full bg-[#EFA531]/30 flex items-center justify-center text-white font-semibold text-sm">
+                    {t.name.charAt(0).toUpperCase()}
                   </div>
-                  <div className="mt-2 flex items-center justify-center space-x-3 text-base">
-                    <div className="font-semibold text-white xl:text-sm">
-                      {t.name}
+                  <div className="flex flex-col items-start">
+                    <div className="text-white font-semibold">{t.name}</div>
+                    <div className="flex space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className={`w-4 h-4 ${
+                            i < t.rating ? "text-yellow-400" : "text-gray-500"
+                          }`}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.049 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
+                        </svg>
+                      ))}
                     </div>
-                    <svg
-                      width={3}
-                      height={3}
-                      viewBox="0 0 2 2"
-                      aria-hidden="true"
-                      className="fill-white"
-                    >
-                      <circle r={1} cx={1} cy={1} />
-                    </svg>
-                    <div className="text-gray-400 xl:text-sm">{t.city}</div>
+                    <div className="text-gray-400 text-sm">{t.city}</div>
                   </div>
-                </figcaption>
+                </div>
               </figure>
             </div>
           ))}
@@ -187,13 +153,13 @@ export default function Testimonials() {
         {/* Botões de navegação */}
         <button
           onClick={prevPage}
-          className="absolute top-1/2 left-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white hover:bg-white hover:text-[#EFA531] flex items-center justify-center transition"
+          className="absolute border-2 border-[#efa531] top-1/2 left-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white hover:bg-white hover:text-[#EFA531] flex items-center justify-center transition"
         >
           ❮
         </button>
         <button
           onClick={nextPage}
-          className="absolute top-1/2 right-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white hover:bg-white hover:text-[#EFA531] flex items-center justify-center transition"
+          className="absolute border-2 border-[#efa531] top-1/2 right-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white hover:bg-white hover:text-[#EFA531] flex items-center justify-center transition"
         >
           ❯
         </button>

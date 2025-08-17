@@ -23,7 +23,7 @@ const Modal = forwardRef<ModalHandle, ModalProps>((props, ref) => {
     <dialog ref={dialogRef} className="modal">
       <div className="modal-box border-1 border-[#EFA531]">
         <h3 className="font-bold text-[#EFA531] text-lg">{props.title}</h3>
-        <div className="py-4">{props.children}</div>
+        <div className="py-4 text-white font-semibold">{props.children}</div>
         <div className="modal-action">
           <button
             type="button"
