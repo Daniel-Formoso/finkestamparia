@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navigation = [
   { name: "Nossos Diferenciais", href: "/#diferenciais" },
@@ -22,7 +23,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <img
+            <Image
               alt="logo loja menu principal"
               src="../header/logo-texto-branco.webp"
               className="w-30"

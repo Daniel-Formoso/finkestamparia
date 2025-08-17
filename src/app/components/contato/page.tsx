@@ -44,6 +44,7 @@ export default function Contact() {
         } else {
           alert("❌ Erro ao enviar. Tente novamente mais tarde.");
         }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         alert("⚠️ Erro de conexão. Verifique sua internet.");
       }
