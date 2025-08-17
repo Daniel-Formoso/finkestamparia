@@ -35,15 +35,15 @@ export default function DifferencesSection() {
           <h2 className="relative rounded-full py-1 text-sm/6 italic font-semibold text-[#EFA531]">
             Nossos Diferenciais
           </h2>
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">
-            O que nos torna único!
-          </p>
-          <p className="mt-6 text-lg/8 text-gray-400">
+        <h2 className="w-full text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
+          Detalhes que fazem a <span className="text-[#EFA531]">diferença</span>
+        </h2>
+          <p className="mt-4 text-lg/8 text-gray-400">
             Conheça o que consideramos essencial para transformar sua compra em uma experiência única e inesquecível.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-16 lg:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {features.map((feature) => (
               <div

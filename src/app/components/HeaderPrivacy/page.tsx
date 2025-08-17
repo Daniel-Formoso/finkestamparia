@@ -5,11 +5,11 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Nossos Diferenciais", href: "#" },
-  { name: "Sobre Nós", href: "#" },
-  { name: "Produtos", href: "#" },
-  { name: "Clientes & Trabalhos", href: "#" },
-  { name: "Personalize o Seu!", href: "#" },
+  { name: "Nossos Diferenciais", href: "/#diferenciais" },
+  { name: "Sobre Nós", href: "/#sobre" },
+  { name: "Produtos", href: "/#produtos" },
+  { name: "Clientes & Trabalhos", href: "/#clientestrabalhos" },
+  { name: "Personalize o Seu!", href: "/#contato" },
 ];
 
 export default function Header() {

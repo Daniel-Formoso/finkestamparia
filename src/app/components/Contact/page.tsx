@@ -5,6 +5,7 @@ import Link from "next/link";
 import Modal, { ModalHandle } from "../../Modal/ModalFormSuccess/page";
 
 export default function Contact() {
+  const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const modalRef = useRef<ModalHandle>(null);
 
@@ -56,7 +57,7 @@ export default function Contact() {
           Contato
         </h2>
         <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          Transforme <span className="text-[#EFA531]">sua ideia</span> em
+          Transforme <span className="text-[#EFA531]">suas ideias</span> em
           realidade
         </h2>
         <p className="mt-2 text-lg/8 text-gray-400">
@@ -196,8 +197,15 @@ export default function Contact() {
                   id="phone-number"
                   name="phone-number"
                   type="text"
-                  maxLength={11}
-                  placeholder="00 99999-9999"
+                  placeholder="(00) 9 9999-9999"
+                  value={phone}
+                  onChange={(e) => {
+                    let value = e.target.value.replace(/\D/g, ""); // Remove tudo que não é número
+                    if (value.length > 11) value = value.slice(0, 11); // Limita 11 dígitos
+                    value = value.replace(/^(\d{2})(\d)/g, "($1) $2"); // Coloca parênteses no DDD
+                    value = value.replace(/(\d{5})(\d)/, "$1-$2"); // Coloca o hífen após 5 números
+                    setPhone(value);
+                  }}
                   className="pl-3.5 block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"
                 />
               </div>
@@ -251,12 +259,12 @@ export default function Contact() {
               htmlFor="agree-to-policies"
               className="text-xs/6 text-gray-400"
             >
-              Ao marcar esta opção, você concorda com a nossa{" "}
+              Ao marcar esta opção, você concorda com as nossas{" "}
               <Link
                 href="../pages/Privacy"
                 className="font-semibold whitespace-nowrap text-[#EFA531] hover:text-[#E1AF65] hover:border-b-2 transition duration-200 ease-in-out"
               >
-                política de privacidade
+                políticas de privacidade
               </Link>
               .
             </label>
@@ -272,7 +280,7 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
-            className="btn btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10 w-full"
+            className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10 w-full"
           >
             Faça um orçamento
           </button>
@@ -280,7 +288,9 @@ export default function Contact() {
       </form>
       {/* Modal de sucesso */}
       <Modal ref={modalRef} title="Mensagem enviada!">
-        Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.
+        Tudo certo! Nossa equipe vai te ajudar a personalizar seus produtos em
+        breve.
+        <div className="mt-4 text-right text-sm text-[#EFA531] font-semibold">— FINK.</div>
       </Modal>
     </div>
   );

@@ -9,22 +9,22 @@ export default function PoliticaPrivacidade() {
      <main className="mt-24 max-w-5xl mx-auto px-6 py-10 text-[#F0F0EC] rounded-xl shadow-lg">
       
       {/* Título principal */}
-      <h1 className="sm:text-4xl text-2xl font-bold mb-8 text-[#EFA531]">
-        Política de Privacidade
+      <h1 className="sm:text-4xl text-xl font-bold mb-8 text-[#EFA531]">
+        Políticas de Privacidade
       </h1>
 
       {/* Introdução */}
-      <p className="mb-6 text-lg leading-relaxed">
+      <p className="mb-6 text-base leading-relaxed">
         Valorizamos a sua privacidade e queremos explicar de forma clara como
         tratamos as informações que você compartilha conosco.
       </p>
 
       {/* Coleta de Informações */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-[#EFA531]">
+        <h2 className="text-xl font-semibold mb-3 text-[#EFA531]">
           1. Informações que Coletamos
         </h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-base leading-relaxed">
           Coletamos apenas as informações que você nos fornece voluntariamente,
           como nome, e-mail, telefone ou mensagem, ao entrar em contato por
           formulário, WhatsApp, Instagram ou e-mail.
@@ -33,10 +33,10 @@ export default function PoliticaPrivacidade() {
 
       {/* Uso das Informações */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-[#EFA531]">
+        <h2 className="text-xl font-semibold mb-3 text-[#EFA531]">
           2. Como Usamos Seus Dados
         </h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-base leading-relaxed">
           Utilizamos seus dados exclusivamente para responder às suas solicitações
           de orçamento ou contato. Não compartilhamos suas informações com terceiros
           para fins comerciais.
@@ -45,10 +45,10 @@ export default function PoliticaPrivacidade() {
 
       {/* Cookies e Estatísticas */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-[#EFA531]">
+        <h2 className="text-xl font-semibold mb-3 text-[#EFA531]">
           3. Cookies e Estatísticas
         </h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-base leading-relaxed">
           Nosso site pode utilizar cookies básicos para melhorar a navegação e
           analisar visitas de forma anônima, sem identificar o usuário.
         </p>
@@ -56,10 +56,10 @@ export default function PoliticaPrivacidade() {
 
       {/* Segurança */}
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-[#EFA531]">
+        <h2 className="text-xl font-semibold mb-3 text-[#EFA531]">
           4. Segurança das Informações
         </h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-base leading-relaxed">
           Tomamos medidas para proteger seus dados, mas lembramos que nenhuma
           transmissão de informações pela internet é 100% segura.
         </p>
@@ -67,15 +67,15 @@ export default function PoliticaPrivacidade() {
 
       {/* Contato */}
       <section>
-        <h2 className="text-2xl font-semibold mb-3 text-[#EFA531]">
+        <h2 className="text-xl font-semibold mb-3 text-[#EFA531]">
           5. Contato
         </h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-base leading-relaxed">
           Em caso de dúvidas sobre esta Política de Privacidade, entre em contato
           conosco pelo e-mail{" "}
           <a
             href="mailto:finkestamparia@gmail.com"
-            className="text-[#EFA531] font-semibold hover:underline"
+            className="text-[#EFA531] font-semibold hover:underline hover:opacity-80"
           >
             finkestamparia@gmail.com
           </a>{" "}

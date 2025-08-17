@@ -5,74 +5,64 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 
 const products = [
   {
-    name: "Azulejo",
-    id: "produto-azulejo-wallace",
+    name: "Azulejo 20x20cm",
+    id: "produto-azulejo-20",
     href: "#contato",
     description:
-      "Azulejo decorativo Wallace, ideal para personalizar sua parede ou mesa.",
+      "Azulejo de cerâmica 20x20cm personalizado, ideal para decorar qualquer ambiente com estilo.",
     features: [
-      "Azulejo de cerâmica resistente",
-      "Impressão de alta qualidade",
-      "Tamanho 20x20cm",
+      "Tamanho: 20x20cm",
+      "Material cerâmico de alta qualidade",
+      "Estampa personalziada exclusiva",
+      "Acabamento resistente e durável",
     ],
-    featured: true,
+    featured: false,
     image: "./produtos/azulejo-wallace.png",
   },
   {
-    name: "Azulejo",
-    id: "produto-azulejo-wallace",
+    name: "Caneca Fut. Americano",
+    id: "produto-caneca-futebol-1",
     href: "#contato",
     description:
-      "Azulejo decorativo Wallace, ideal para personalizar sua parede ou mesa.",
+      "Caneca de cerâmica branca personalizada com tema de futebol americano, perfeita para fãs do esporte.",
     features: [
-      "Azulejo de cerâmica resistente",
-      "Impressão de alta qualidade",
-      "Tamanho 20x20cm",
+      "Material: cerâmica branca",
+      "Capacidade: 325ml",
+      "Design exclusivo com tema futebol americano",
+      "Acabamento resistente",
     ],
-    featured: true,
-    image: "./produtos/azulejo-wallace.png",
+    featured: false,
+    image: "./produtos/caneca-gui.png",
   },
   {
-    name: "Azulejo",
-    id: "produto-azulejo-wallace",
+    name: "Caneca Fut. Americano",
+    id: "produto-caneca-futebol-2",
     href: "#contato",
     description:
-      "Azulejo decorativo Wallace, ideal para personalizar sua parede ou mesa.",
+      "Outra opção de caneca personalizada com tema de futebol americano, ótima para colecionadores ou fãs do esporte.",
     features: [
-      "Azulejo de cerâmica resistente",
-      "Impressão de alta qualidade",
-      "Tamanho 20x20cm",
+      "Material: cerâmica branca",
+      "Capacidade: 325ml",
+      "Design exclusivo com tema futebol americano",
+      "Acabamento resistente",
     ],
-    featured: true,
-    image: "./produtos/azulejo-wallace.png",
+    featured: false,
+    image: "./produtos/caneca-the-jhon.png",
   },
   {
-    name: "Azulejo",
-    id: "produto-azulejo-wallace",
+    name: "Squeeze de Alumínio",
+    id: "produto-squeeze-dia-dos-pais",
     href: "#contato",
     description:
-      "Azulejo decorativo Wallace, ideal para personalizar sua parede ou mesa.",
+      "Squeeze de alumínio personalizada, perfeita para se manter hidratado com estilo no Dia dos Pais.",
     features: [
-      "Azulejo de cerâmica resistente",
-      "Impressão de alta qualidade",
-      "Tamanho 20x20cm",
+      "Material: alumínio resistente",
+      "Capacidade: 500ml",
+      "Design exclusivo para o Dia dos Pais",
+      "Leve e portátil, ideal para uso diário",
     ],
-    featured: true,
-    image: "./produtos/azulejo-wallace.png",
-  },
-  {
-    name: "Azulejo",
-    id: "produto-azulejo-wallace",
-    href: "#contato",
-    description:
-      "Azulejo decorativo Wallace, ideal para personalizar sua parede ou mesa.",
-    features: [
-      "Azulejo de cerâmica resistente",
-      "Impressão de alta qualidade",
-      "Tamanho 20x20cm",
-    ],
-    featured: true,
-    image: "./produtos/azulejo-wallace.png",
+    featured: false,
+    image: "./produtos/squeeze-dia-dos-pais.png",
   },
 ];
 
@@ -97,15 +87,9 @@ export default function Products() {
             key={product.id}
             className={classNames(
               "md:w-100 xl:w-full",
-              product.featured
-                ? "relative bg-gray-800 relative rounded-2xl bg-gray-800 border border-[#EFA531]/40 md:p-6 p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-                : "bg-white/2.5 sm:mx-8 lg:mx-0",
-              product.featured
-                ? ""
-                : idx === 0
-                ? "rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl"
-                : "sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none",
-              "rounded-3xl p-8 ring-1 ring-white/10 sm:p-10 flex flex-col h-full justify-between"
+              "bg-[#1E2939]", // fundo verde
+              "rounded-3xl",  // borda bem arredondada
+              "md:p-6 p-6 ring-1 ring-white/10 sm:p-10 flex flex-col h-full justify-between border border-[#EFA531]/40"
             )}
           >
             <h3
@@ -142,7 +126,7 @@ export default function Products() {
             <a
               href={product.href}
               aria-describedby={product.id}
-              className="mt-4 block rounded-md bg-[#EFA531] px-3.5 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-white hover:text-[#EFA531]"
+              className="mt-4 block rounded-md bg-[#EFA531] border-2 border-[#efa531] px-3.5 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-white hover:text-[#EFA531]"
             >
               Peça Já o Seu!
             </a>
@@ -154,7 +138,7 @@ export default function Products() {
       <div className={`flex justify-center ${mostrarMais ? "mt-8" : "mt-4 "}`}>
         <button
           onClick={() => setMostrarMais(!mostrarMais)}
-          className="btn btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10"
+          className="btn btn-outline border-2 bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10"
         >
           {mostrarMais ? "Ver menos" : "Ver mais"}
         </button>

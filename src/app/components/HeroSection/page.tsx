@@ -10,7 +10,7 @@ const navigation = [
   { name: "Produtos", href: "#produtos" },
   { name: "Clientes & Trabalhos", href: "#clientestrabalhos" },
   { name: "Personalize o Seu!", href: "#contato" },
-  { name: "Política e Privacidade", href: "../pages/Privacy" },
+  { name: "Políticas e Privacidade", href: "../pages/Privacy" },
 ];
 
 export default function HeroSection() {
@@ -113,7 +113,7 @@ export default function HeroSection() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative italic rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-gray-900/50">
              Quer ficar por dentro das novidades?
-              <a href="#" className="font-semibold text-[#EFA531] pl-2 hover:text-white">
+              <a href="https://www.instagram.com/finkestamparia/" className="font-semibold text-[#EFA531] pl-2 hover:text-white">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Confira no Instagram!<span aria-hidden="true"> →</span>
               </a>
@@ -129,7 +129,7 @@ export default function HeroSection() {
             <div className="mt-6 flex items-center justify-center gap-x-8">
               <a
                 href="#contato"
-                className="btn btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10"
+                className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531]  hover:bg-white hover:text-[#EFA531] px-10"
               >
                 Já Quero!
               </a>

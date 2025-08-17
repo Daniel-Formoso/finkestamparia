@@ -16,7 +16,7 @@ export default function Footer() {
           <p className="font-bold">FINK. Estamparia</p>
           <p className="font-bold">Transformando ideias em produtos reais</p>
           <p>
-            Copyright © {new Date().getFullYear()} - Todos os direitos
+            © {new Date().getFullYear()} FINK Estamparia - Todos os direitos
             reservados
           </p>
         </aside>
