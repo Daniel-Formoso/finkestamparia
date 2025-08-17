@@ -18,7 +18,7 @@ export default function HeroSection() {
 
   return (
     <div className="bg-[#041F3F]">
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header className="absolute inset-x-0 top-0 z-50 animate-fade animate-duration-500 animate-delay-400 animate-ease-in animate-normal animate-fill-both">
         <nav
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8"
@@ -111,7 +111,7 @@ export default function HeroSection() {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative italic rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-gray-900/50">
+            <div className="relative italic rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-gray-900/50 animate-fade animate-duration-500 animate-delay-800 animate-ease-in animate-normal animate-fill-both">
              Quer ficar por dentro das novidades?
               <a href="https://www.instagram.com/finkestamparia/" className="font-semibold text-[#EFA531] pl-2 hover:text-white">
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -120,20 +120,20 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+            <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-6xl animate-fade animate-duration-500 animate-delay-1200 animate-ease-in animate-normal animate-fill-both">
               Transforme <span className="text-[#EFA531]">objetos comuns</span> em<span className="text-[#EFA531]"> peças inesquecíveis!</span>              
             </h1>
-            <p className="mt-8 text-lg font-regular text-gray-400 sm:text-lg/8">
+            <p className="mt-8 text-lg font-regular text-gray-400 sm:text-lg/8 animate-fade animate-duration-500 animate-delay-1600 animate-ease-in animate-normal animate-fill-both">
               Criamos canecas, azulejos, squeezes e muito mais, feitos sob medida para refletir o seu estilo. Surpreenda com presentes únicos ou dê mais personalidade ao seu dia a dia.
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-8">
               <a
                 href="#contato"
-                className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531]  hover:bg-white hover:text-[#EFA531] px-10"
+                className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10 animate-fade-right animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both"
               >
                 Já Quero!
               </a>
-              <a href="#produtos" className="text-sm/6 font-semibold text-gray-400 hover:text-[#EFA531]">
+              <a href="#produtos" className="text-sm/6 font-semibold text-gray-400 hover:text-[#EFA531] animate-fade-left animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both">
                 Ver modelos <span aria-hidden="true">→</span>
               </a>
             </div>
