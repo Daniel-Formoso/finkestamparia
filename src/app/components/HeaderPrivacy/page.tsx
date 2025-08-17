@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from 'next/link';
 
 const navigation = [
   { name: "Nossos Diferenciais", href: "/#diferenciais" },
@@ -20,13 +21,13 @@ export default function Header() {
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <img
               alt="logo loja menu principal"
               src="../header/logo-texto-branco.png"
               className="w-30"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Botão mobile */}
