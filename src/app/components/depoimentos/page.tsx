@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 export default function Testimonials() {
   const testimonials = [
     {
-      text: "Recebi minha caneca personalizada super rápido e a qualidade é excelente!",
-      name: "Lucas",
-      city: "Rio de Janeiro, RJ",
+      text: "Encomendei um presente personalizado com a Fink para o Dia das Mães e fiquei encantada! Desde o atendimento atencioso até a entrega dentro do prazo, tudo foi impecável. O resultado superou minhas expectativas e emocionou minha mãe. Recomendo de olhos fechados!",
+      name: "Rafaela Soares",
+      city: "Nova Iguaçu, RJ",
       rating: 5,
     },
     {
@@ -115,9 +115,9 @@ export default function Testimonials() {
                   : "xl:w-1/3"
               }`}
             >
-              <figure className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border-l-4 border-[#EFA531] rounded-2xl h-[300px] flex flex-col justify-between p-6 shadow-lg">
+              <figure className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border-l-4 border-[#EFA531] rounded-2xl h-[360px] flex flex-col justify-between p-6 shadow-lg">
                 <div className="text-[#EFA531] text-3xl">“</div>
-                <blockquote className="text-left text-base/8 font-medium text-white flex-grow flex flex-col justify-between px-2">
+                <blockquote className="text-left text-sm/6 font-medium text-white flex-grow flex flex-col justify-between px-2">
                   <p>{t.text}</p>
                   <div className="text-[#EFA531] text-3xl self-end">”</div>
                 </blockquote>
