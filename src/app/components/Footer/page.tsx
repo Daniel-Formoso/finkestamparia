@@ -1,7 +1,5 @@
 import { FaInstagram } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
-import Link from "next/link";
 
 export default function Footer() {
   return (

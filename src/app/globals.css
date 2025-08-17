@@ -1,4 +1,4 @@
-/* @import "tailwindcss";
+@import "tailwindcss";
 @plugin "daisyui";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* @import "tw-animate-css"; */
@@ -123,40 +123,46 @@ html {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* dialog::backdrop {
-  background-color: red
+/* O backdrop atrás do modal */
+dialog::backdrop {
+  background-color: red; /* escurece a página atrás */
 }
 
-
+/* O próprio modal */
 dialog {
+  /* background-color: #1D232A; fundo escuro do modal */
   border: none;
   border-radius: 12px;
   padding: 20px;
   color: #F0F0EC;
-} */
+}
 
+/* ============================================ */
+/*        BARRA DE ROLAGEM PERSONALIZADA       */
+/* ============================================ */
+
+/* --- WebKit (Chrome, Edge, Safari) --- */
 ::-webkit-scrollbar {
-  width: 10px; /* largura da barra */
-  height: 10px; /* altura da barra horizontal, se houver */
+  width: 12px;             /* largura da barra */
 }
 
 ::-webkit-scrollbar-track {
-  background: #041f3f; /* cor do fundo da barra */
-  border-radius: 10px;
+  background: #19222B;     /* cor do fundo da barra */
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #EFA531; /* cor do "polegar" */
-  border-radius: 10px;
-  border: 2px solid #041f3f; /* cria um espaçamento elegante */
+  background-color: #EFA531;  /* cor da barra */
+  border-radius: 6px;
+  border: 3px solid #19222B;  /* cria espaçamento entre thumb e track */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #f5c07a; /* muda a cor quando passar o mouse */
+  background-color: #D8A22F;  /* cor ao passar o mouse (um dourado mais escuro) */
 }
 
-/* Para Firefox */
+/* --- Firefox --- */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #EFA531 #041f3f;
-} 
+  scrollbar-width: thin;                  /* "auto" ou "thin" */
+  scrollbar-color: #EFA531 #19222B;      /* thumb | track */
+}
