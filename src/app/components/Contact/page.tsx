@@ -280,7 +280,7 @@ export default function Contact() {
         <div className="mt-10">
           <button
             type="submit"
-            className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10 w-full"
+            className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531] xl:hover:bg-white xl:hover:text-[#EFA531] px-10 w-full"
           >
             Faça um orçamento
           </button>

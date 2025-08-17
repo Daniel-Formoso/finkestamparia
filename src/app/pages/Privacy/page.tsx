@@ -75,7 +75,7 @@ export default function PoliticaPrivacidade() {
           conosco pelo e-mail{" "}
           <a
             href="mailto:finkestamparia@gmail.com"
-            className="text-[#EFA531] font-semibold hover:underline hover:opacity-80"
+            className="text-[#EFA531] font-semibold xl:hover:underline xl:hover:opacity-80"
           >
             finkestamparia@gmail.com
           </a>{" "}

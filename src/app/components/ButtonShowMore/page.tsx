@@ -18,7 +18,7 @@ const products = [
       "Acabamento resistente e durável",
     ],
     featured: false,
-    image: "./produtos/azulejo-wallace.png",
+    image: "./produtos/azulejo-wallace.webp",
   },
   {
     name: "Caneca Fut. Americano",
@@ -33,7 +33,7 @@ const products = [
       "Acabamento resistente",
     ],
     featured: false,
-    image: "./produtos/caneca-gui.png",
+    image: "./produtos/caneca-gui.webp",
   },
   {
     name: "Caneca Fut. Americano",
@@ -48,7 +48,7 @@ const products = [
       "Acabamento resistente",
     ],
     featured: false,
-    image: "./produtos/caneca-the-jhon.png",
+    image: "./produtos/caneca-the-jhon.webp",
   },
   {
     name: "Squeeze de Alumínio",
@@ -63,7 +63,7 @@ const products = [
       "Leve e portátil, ideal para uso diário",
     ],
     featured: false,
-    image: "./produtos/squeeze-dia-dos-pais.png",
+    image: "./produtos/squeeze-dia-dos-pais.webp",
   },
 ];
 
@@ -127,7 +127,7 @@ export default function Products() {
             <Link
               href={product.href}
               aria-describedby={product.id}
-              className="mt-4 block rounded-md bg-[#EFA531] border-2 border-[#efa531] px-3.5 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-white hover:text-[#EFA531]"
+              className="mt-4 block rounded-md bg-[#EFA531] border-2 border-[#efa531] px-3.5 py-2.5 text-center text-sm font-semibold text-white transition xl:hover:bg-white xl:hover:text-[#EFA531]"
             >
               Peça Já o Seu!
             </Link>
@@ -139,7 +139,7 @@ export default function Products() {
       <div className={`flex justify-center ${mostrarMais ? "mt-8" : "mt-4 "}`}>
         <button
           onClick={() => setMostrarMais(!mostrarMais)}
-          className="btn btn-outline border-2 bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10"
+          className="btn btn-outline border-2 bg-[#EFA531] text-white border-[#EFA531] xl:hover:bg-white xl:hover:text-[#EFA531] px-10"
         >
           {mostrarMais ? "Ver menos" : "Ver mais"}
         </button>

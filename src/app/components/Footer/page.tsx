@@ -9,7 +9,7 @@ export default function Footer() {
       <footer className="footer footer-horizontal footer-center bg-[#101828] text-primary-content p-10">
         <aside>
           <img
-            src="/header/logo-texto-branco.png"
+            src="/header/logo-texto-branco.webp"
             alt="FINK Estamparia Logo"
             className="w-30 mb-4"
           />
@@ -26,14 +26,14 @@ export default function Footer() {
               href="https://www.instagram.com/finkestamparia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-[#EFA531] transition duration-200 ease-in-out"
+              className="text-white xl:hover:text-[#EFA531] transition duration-200 ease-in-out"
             >
               <FaInstagram size={30} />
             </a>
             <a
               href="mailto:finkestamparia@gmail.com"
               target="_blank"
-              className="text-white hover:text-[#EFA531] transition duration-200 ease-in-out"
+              className="text-white xl:hover:text-[#EFA531] transition duration-200 ease-in-out"
             >
               <MdOutlineMail size={30} />
             </a>

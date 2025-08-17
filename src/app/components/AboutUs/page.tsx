@@ -56,7 +56,7 @@ export default function AboutUs() {
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 lg:gap-x-0 w-full lg:w-120">
             {links.map((link) => (
-              <Link key={link.name} href={link.href} className="hover:text-[#EFA531] transition w-60 lg:w-60">
+              <Link key={link.name} href={link.href} className="xl:hover:text-[#EFA531] transition w-60 lg:w-60">
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </Link>
             ))}

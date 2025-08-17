@@ -13,7 +13,7 @@ export default function NotFound() {
         </p>
         <div className="mt-8 flex items-center justify-center gap-x-6">
           <Link href="/">
-            <div className="btn btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10 w-full">
+            <div className="btn btn-outline bg-[#EFA531] text-white border-[#EFA531] xl:hover:bg-white xl:hover:text-[#EFA531] px-10 w-full">
               Voltar para a Home
             </div>
           </Link>

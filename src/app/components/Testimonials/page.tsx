@@ -153,13 +153,13 @@ export default function Testimonials() {
         {/* Botões de navegação */}
         <button
           onClick={prevPage}
-          className="absolute border-2 border-[#efa531] top-1/2 left-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white hover:bg-white hover:text-[#EFA531] flex items-center justify-center transition"
+          className="absolute border-2 border-[#efa531] top-1/2 left-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white xl:hover:bg-white xl:hover:text-[#EFA531] flex items-center justify-center transition"
         >
           ❮
         </button>
         <button
           onClick={nextPage}
-          className="absolute border-2 border-[#efa531] top-1/2 right-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white hover:bg-white hover:text-[#EFA531] flex items-center justify-center transition"
+          className="absolute border-2 border-[#efa531] top-1/2 right-0 -translate-y-1/2 w-10 h-10 rounded-full bg-[#EFA531] cursor-pointer text-white xl:hover:bg-white xl:hover:text-[#EFA531] flex items-center justify-center transition"
         >
           ❯
         </button>

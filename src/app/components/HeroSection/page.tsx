@@ -28,7 +28,7 @@ export default function HeroSection() {
             <Link href="#" className="-m-1.5 p-1.5">
               <img
                 alt="logo loja menu principal"
-                src="./header/logo-texto-branco.png"
+                src="./header/logo-texto-branco.webp"
                 className="w-30"
               />
             </Link>
@@ -47,8 +47,7 @@ export default function HeroSection() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-regular text-white py-2 hover:border-b-2
-                 border-[#EFA531]"
+                className="text-sm font-regular text-white py-2 hover:border-b-2 border-[#EFA531]"
               >
                 {item.name}
               </Link>
@@ -66,7 +65,7 @@ export default function HeroSection() {
               <Link href="#" className="-m-1.5 p-1.5">
                 <img
                   alt="logo loja menu mobile"
-                  src="./header/logo-texto-azul.png"
+                  src="./header/logo-texto-azul.webp"
                   className="w-30"
                 />
               </Link>
@@ -85,6 +84,7 @@ export default function HeroSection() {
                     <Link
                       key={item.name}
                       href={item.href}
+                      onClick={() => setMobileMenuOpen(false)} // Fecha o menu ao clicar
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
@@ -111,8 +111,8 @@ export default function HeroSection() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative italic rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-gray-900/50 animate-fade animate-duration-500 animate-delay-800 animate-ease-in animate-normal animate-fill-both">
+          <div className="sm:mb-8 sm:flex sm:justify-center">
+            <div className="hidden relative italic rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-gray-900/50 animate-fade animate-duration-500 animate-delay-800 animate-ease-in animate-normal animate-fill-both">
              Quer ficar por dentro das novidades?
               <a href="https://www.instagram.com/finkestamparia/" className="font-semibold text-[#EFA531] pl-2 hover:text-white">
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -130,11 +130,11 @@ export default function HeroSection() {
             <div className="mt-6 flex items-center justify-center gap-x-8">
               <Link
                 href="#contato"
-                className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] px-10 animate-fade-right animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both"
+                className="btn border-2 btn-outline bg-[#EFA531] text-white border-[#EFA531] xl:hover:bg-white xl:hover:text-[#EFA531] px-10 animate-fade-right animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both"
               >
                 Já Quero!
               </Link>
-              <Link href="#produtos" className="text-sm/6 font-semibold text-gray-400 hover:text-[#EFA531] animate-fade-left animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both">
+              <Link href="#produtos" className="text-sm/6 font-semibold text-gray-400 xl:hover:text-[#EFA531] animate-fade-left animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both">
                 Ver modelos <span aria-hidden="true">→</span>
               </Link>
             </div>

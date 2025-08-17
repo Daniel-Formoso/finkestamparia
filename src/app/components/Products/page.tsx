@@ -18,7 +18,7 @@ const products = [
       "Acabamento resistente e durável",
     ],
     featured: true,
-    image: "./produtos/azulejo-lua-faisca.png",
+    image: "./produtos/azulejo-lua-faisca.webp",
   },
   {
     name: "Caneca de Chopp",
@@ -33,7 +33,7 @@ const products = [
       "Ideal para presentes ou uso pessoal",
     ],
     featured: true,
-    image: "./produtos/caneca-de-chopp.png",
+    image: "./produtos/caneca-de-chopp.webp",
   },
   {
     name: "Caneca Snoopy",
@@ -48,7 +48,7 @@ const products = [
       "Acabamento resistente",
     ],
     featured: true,
-    image: "./produtos/caneca-snoopy.png",
+    image: "./produtos/caneca-snoopy.webp",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function Products() {
             <Link
               href={product.href}
               aria-describedby={product.id}
-              className="bg-[#EFA531] border-2 hover:bg-[#EFA531] tn btn-outline bg-[#EFA531] text-white border-[#EFA531] hover:bg-white hover:text-[#EFA531] mt-4 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold sm:mt-1 transition"
+              className="bg-[#EFA531] border-2 xl:hover:bg-[#EFA531] tn btn-outline bg-[#EFA531] text-white border-[#EFA531] xl:hover:bg-white xl:hover:text-[#EFA531] mt-4 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold sm:mt-1 transition"
             >
               Peça Já o Seu!
             </Link>
