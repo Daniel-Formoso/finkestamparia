@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import "tw-animate-css";
+/* @import "tw-animate-css"; */
+@import "tailwindcss";
+@import "tailwindcss-animated";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -121,20 +123,3 @@ html {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-8px); }
-  40%, 80% { transform: translateX(8px); }
-}
-.shake {
-  animation: shake 1s infinite;
-}
