@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
-import Modal, { ModalHandle } from "../../Modal/ModalFormSuccess/page";
+import Modal, { ModalHandle } from "../Modal/modal";
 
 export default function Contact() {
   const [phone, setPhone] = useState("");
@@ -290,7 +290,9 @@ export default function Contact() {
       <Modal ref={modalRef} title="Mensagem enviada!">
         Tudo certo! Nossa equipe vai te ajudar a personalizar seus produtos em
         breve.
-        <div className="mt-4 text-right text-sm text-[#EFA531] font-semibold">— FINK.</div>
+        <div className="mt-4 text-right text-sm text-[#EFA531] font-semibold">
+          — FINK.
+        </div>
       </Modal>
     </div>
   );
