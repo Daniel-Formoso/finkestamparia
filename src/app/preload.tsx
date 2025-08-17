@@ -10,7 +10,7 @@ export default function Preloader() {
   useEffect(() => {
     // Simula carregamento por 1.5s
     const timer = setTimeout(() => {
-      setFadeOut(true); // inicia transição
+      setFadeOut(true);
       setTimeout(() => setLoading(false), 500); 
     }, 1500);
 
