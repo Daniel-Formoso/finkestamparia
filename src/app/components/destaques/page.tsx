@@ -29,8 +29,9 @@ export default function HeroSection() {
             <Link href="#" className="-m-1.5 p-1.5">
               <Image
                 alt="logo loja menu principal"
-                src="./header/logo-texto-branco.webp"
-                className="w-30"
+                src="/header/logo-texto-branco.webp"
+                width={150} // largura em pixels
+                height={50} // altura proporcional
               />
             </Link>
           </div>
@@ -67,7 +68,8 @@ export default function HeroSection() {
                 <Image
                   alt="logo loja menu mobile"
                   src="./header/logo-texto-azul.webp"
-                  className="w-30"
+                  width={150}    // largura em pixels
+                  height={50} 
                 />
               </Link>
               <button

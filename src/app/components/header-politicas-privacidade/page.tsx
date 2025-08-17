@@ -5,8 +5,6 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from 'next/link';
 import Image from 'next/image';
-import logoBranca from "../../../../public/header/logo-texto-branco.webp"
-import logoAzul from "../../../../public/header/logo-texto-azul.webp"
 
 const navigation = [
   { name: "Nossos Diferenciais", href: "/#diferenciais" },
@@ -27,7 +25,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
               alt="logo loja menu principal"
-              src={logoBranca}
+              src="./header/logo-texto-branco.webp"
               className="w-30"
             />
           </Link>
@@ -66,7 +64,7 @@ export default function Header() {
             <Link href="#" className="-m-1.5 p-1.5">
               <Image
                 alt="logo loja menu mobile"
-                src={logoAzul}
+                src="./header/logo-texto-azul.webp"
                 className="w-30"
               />
             </Link>

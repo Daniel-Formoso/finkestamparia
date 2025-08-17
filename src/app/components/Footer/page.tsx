@@ -10,7 +10,9 @@ export default function Footer() {
           <Image
             src="/header/logo-texto-branco.webp"
             alt="FINK Estamparia Logo"
-            className="w-30 mb-4"
+            width={180}
+            height={60}
+            className="mb-4"
           />
           <p className="font-bold">FINK. Estamparia</p>
           <p className="font-bold">Transformando ideias em produtos reais</p>
@@ -36,12 +38,6 @@ export default function Footer() {
             >
               <MdOutlineMail size={30} />
             </a>
-            {/* <Link
-              href="/AtSoon/page"
-              className="text-white hover:text-[#EFA531] transition duration-200 ease-in-out"
-            >
-              <FaWhatsapp size={30} />
-            </Link> */}
           </div>
         </nav>
       </footer>
