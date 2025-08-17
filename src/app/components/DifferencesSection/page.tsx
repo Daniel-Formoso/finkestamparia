@@ -38,7 +38,7 @@ export default function DifferencesSection() {
         <h2 className="w-full text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
           Detalhes que fazem a <span className="text-[#EFA531]">diferença</span>
         </h2>
-          <p className="mt-4 text-lg/8 text-gray-400 animate-fade-left animate-duration-500 animate-delay-[2000ms] animate-ease-in animate-normal animate-fill-both">
+          <p className="mt-4 text-lg/8 text-gray-400">
             Conheça o que consideramos essencial para transformar sua compra em uma experiência única e inesquecível.
           </p>
         </div>
