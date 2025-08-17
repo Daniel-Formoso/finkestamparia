@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <img
               alt="logo loja menu principal"
-              src="../header/logo-texto-branco.png"
+              src="../header/logo-texto-branco.webp"
               className="w-30"
             />
           </Link>
@@ -63,7 +63,7 @@ export default function Header() {
             <Link href="#" className="-m-1.5 p-1.5">
               <img
                 alt="logo loja menu mobile"
-                src="../header/logo-texto-azul.png"
+                src="../header/logo-texto-azul.webp"
                 className="w-30"
               />
             </Link>

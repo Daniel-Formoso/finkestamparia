@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckIcon } from "@heroicons/react/20/solid";
-import ButtonShowMore from "../ButtonShowMore/page";
+import ButtonShowMore from "../botao-ver-mais/page";
 import Link from "next/link";
 
 const products = [

@@ -11,7 +11,7 @@ const navigation = [
   { name: "Produtos", href: "#produtos" },
   { name: "Clientes & Trabalhos", href: "#clientestrabalhos" },
   { name: "Personalize o Seu!", href: "#contato" },
-  { name: "Políticas e Privacidade", href: "../pages/Privacy" },
+  { name: "Políticas e Privacidade", href: "../pages/politicas-privacidade" },
 ];
 
 export default function HeroSection() {

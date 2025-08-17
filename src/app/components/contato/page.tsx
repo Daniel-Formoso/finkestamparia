@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import Link from "next/link";
-import Modal, { ModalHandle } from "../Modal/modal";
+import Modal, { ModalHandle } from "../modal/modal";
 
 export default function Contact() {
   const [phone, setPhone] = useState("");
