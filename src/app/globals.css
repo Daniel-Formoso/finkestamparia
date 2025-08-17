@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @plugin "daisyui";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* @import "tw-animate-css"; */
@@ -123,16 +123,41 @@ html {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* O backdrop atrás do modal */
-dialog::backdrop {
-  background-color: red; /* escurece a página atrás */
+/* dialog::backdrop {
+  background-color: red
 }
 
-/* O próprio modal */
+
 dialog {
-  /* background-color: #1D232A; fundo escuro do modal */
   border: none;
   border-radius: 12px;
   padding: 20px;
   color: #F0F0EC;
+} */
+
+/* Barra de rolagem para todos os navegadores baseados em WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* largura da barra */
+  height: 10px; /* altura da barra horizontal, se houver */
 }
+
+::-webkit-scrollbar-track {
+  background: #041f3f; /* cor do fundo da barra */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EFA531; /* cor do "polegar" */
+  border-radius: 10px;
+  border: 2px solid #041f3f; /* cria um espaçamento elegante */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f5c07a; /* muda a cor quando passar o mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #EFA531 #041f3f;
+} 

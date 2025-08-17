@@ -3,6 +3,7 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
 import ButtonShowMore from "../botao-ver-mais/page";
 import Link from "next/link";
+import Image from "next/image";
 
 const products = [
   {
@@ -18,7 +19,7 @@ const products = [
       "Acabamento resistente e durável",
     ],
     featured: true,
-    image: "./produtos/azulejo-lua-faisca.webp",
+    image: "/produtos/azulejo-lua-faisca.webp",
   },
   {
     name: "Caneca de Chopp",
@@ -33,7 +34,7 @@ const products = [
       "Ideal para presentes ou uso pessoal",
     ],
     featured: true,
-    image: "./produtos/caneca-de-chopp.webp",
+    image: "/produtos/caneca-de-chopp.webp",
   },
   {
     name: "Caneca Snoopy",
@@ -48,7 +49,7 @@ const products = [
       "Acabamento resistente",
     ],
     featured: true,
-    image: "./produtos/caneca-snoopy.webp",
+    image: "/produtos/caneca-snoopy.webp",
   },
 ];
 
@@ -68,9 +69,9 @@ export default function Products() {
           Produtos
         </h2>
         <h2 className="w-full text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          <span className="text-[#EFA531]">Personalize</span>, 
-          <span className="text-[#EFA531]"> crie </span> e
-          <span className="text-[#EFA531]"> inspire</span> com cada peça!
+          <span className="text-[#EFA531]">Personalize</span>,{" "}
+          <span className="text-[#EFA531]">crie</span> e{" "}
+          <span className="text-[#EFA531]">inspire</span> com cada peça!
         </h2>
       </div>
       <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400 sm:text-lg">
@@ -85,9 +86,8 @@ export default function Products() {
           <div
             key={product.id}
             className={classNames(
-              // Largura full por padrão, só fixa no md (tablet)
               "md:w-100 xl:w-full",
-              "border border-[#EFA531]/40", // <-- borda amarela para todos os cards
+              "border border-[#EFA531]/40",
               product.featured
                 ? "relative bg-gray-800 rounded-2xl md:p-6 p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 : "bg-white/2.5 sm:mx-8 lg:mx-0",
@@ -106,14 +106,22 @@ export default function Products() {
             >
               {product.name}
             </h3>
-            <img
+
+            <Image
               src={product.image}
               alt={product.name}
+              width={400} // ajuste conforme a imagem real
+              height={400} // ajuste conforme a imagem real
               className="my-4 w-full h-auto object-cover rounded-2xl"
+              priority={product.featured} // lazy load se não for destaque
+              quality={75} // compressão otimizada
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
+
             <p className="text-gray-400 text-xs/6 md:text-xs/6 lg:text-sm/6">
               {product.description}
             </p>
+
             <ul className="my-4 space-y-2 text-gray-400 text-xs/6 lg:text-sm/6">
               {product.features.map((feature) => (
                 <li key={feature} className="flex gap-x-2">
@@ -125,6 +133,7 @@ export default function Products() {
                 </li>
               ))}
             </ul>
+
             <Link
               href={product.href}
               aria-describedby={product.id}
