@@ -11,7 +11,7 @@ export default function Preloader() {
     // Simula carregamento por 1.5s
     const timer = setTimeout(() => {
       setFadeOut(true); // inicia transição
-      setTimeout(() => setLoading(false), 500); // remove do DOM após animação
+      setTimeout(() => setLoading(false), 500); 
     }, 1500);
 
     return () => clearTimeout(timer);
