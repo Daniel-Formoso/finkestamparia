@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function Testimonials() {
   const testimonials = [
     {
-      text: "Encomendei um presente personalizado com a Fink para o Dia das Mães e fiquei encantada! Desde o atendimento atencioso até a entrega dentro do prazo, tudo foi impecável. O resultado superou minhas expectativas e emocionou minha mãe. Recomendo de olhos fechados!",
+      text: "Comprei um presente personalizado da Fink para o Dia das Mães e fiquei muito satisfeita. Atendimento cuidadoso, entrega no prazo e o resultado emocionou minha mãe. Recomendo com confiança!",
       name: "Rafaela Soares",
       city: "Nova Iguaçu, RJ",
       rating: 5,
