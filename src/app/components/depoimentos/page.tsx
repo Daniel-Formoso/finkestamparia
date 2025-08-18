@@ -125,7 +125,7 @@ export default function Testimonials() {
                   <div className="w-10 h-10 rounded-full bg-[#EFA531]/30 flex items-center justify-center text-white font-semibold text-sm">
                     {t.name.charAt(0).toUpperCase()}
                   </div>
-                  <div className="flex flex-col items-start border-1">
+                  <div className="flex flex-col items-start border-1 border-red-500">
                     <div className="text-white font-semibold">{t.name}</div>
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
