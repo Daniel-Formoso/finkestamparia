@@ -117,7 +117,7 @@ export default function Testimonials() {
             >
               <figure className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border-l-4 border-[#EFA531] rounded-2xl h-[360px] flex flex-col justify-between p-6 shadow-lg">
                 <div className="text-[#EFA531] text-3xl">“</div>
-                <blockquote className="text-left text-sm/6 font-medium text-white flex-grow flex flex-col justify-between px-2">
+                <blockquote className="text-left text-sm/6 font-medium text-white flex-grow flex flex-col justify-between">
                   <p>{t.text}</p>
                   <div className="text-[#EFA531] text-3xl self-end">”</div>
                 </blockquote>
