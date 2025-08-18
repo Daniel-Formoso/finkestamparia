@@ -117,7 +117,7 @@ export default function Testimonials() {
             >
               <figure className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border-l-4 border-[#EFA531] rounded-2xl h-[360px] flex flex-col justify-between p-6 shadow-lg">
                 <div className="text-[#EFA531] text-3xl">“</div>
-                <blockquote className="text-left text-sm/6 font-medium text-white flex-grow flex flex-col justify-between px-2">
+                <blockquote className="text-left text-xs/6 font-medium text-white flex-grow flex flex-col justify-between px-2">
                   <p>{t.text}</p>
                   <div className="text-[#EFA531] text-3xl self-end">”</div>
                 </blockquote>
@@ -125,7 +125,7 @@ export default function Testimonials() {
                   <div className="w-10 h-10 rounded-full bg-[#EFA531]/30 flex items-center justify-center text-white font-semibold text-sm">
                     {t.name.charAt(0).toUpperCase()}
                   </div>
-                  <div className="flex flex-col items-start border-1 border-red-500">
+                  <div className="flex flex-col items-start">
                     <div className="text-white font-semibold">{t.name}</div>
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, i) => (
