@@ -1,7 +1,11 @@
+import Rodape from "../components/rodape/page";
+import Header from "../components/headerPrivacidade/page";
+
 export default function PoliticaPrivacidade() {
   return (
     <>
-    <h1>teste pagina de privacidade</h1>
+      <Header />
+      <Rodape/>
     </>
-  )
+  );
 }
