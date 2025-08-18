@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function Testimonials() {
   const testimonials = [
     {
-      text: "Comprei um presente personalizado da Fink para o Dia das Mães e fiquei muito satisfeita. Atendimento cuidadoso, entrega no prazo e o resultado emocionou minha mãe. Recomendo com confiança!",
+      text: "Presenteei minha mãe com algo personalizado da Fink e foi perfeito! Atendimento cuidadoso, entrega pontual e um resultado que emocionou. Recomendo de coração!",
       name: "Rafaela Soares",
       city: "Nova Iguaçu, RJ",
       rating: 5,
@@ -117,7 +117,7 @@ export default function Testimonials() {
             >
               <figure className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 border-l-4 border-[#EFA531] rounded-2xl h-[360px] flex flex-col justify-between p-6 shadow-lg">
                 <div className="text-[#EFA531] text-3xl">“</div>
-                <blockquote className="text-left text-xs/6 font-medium text-white flex-grow flex flex-col justify-between px-2">
+                <blockquote className="text-left text-sm/6 font-medium text-white flex-grow flex flex-col justify-between px-2">
                   <p>{t.text}</p>
                   <div className="text-[#EFA531] text-3xl self-end">”</div>
                 </blockquote>
