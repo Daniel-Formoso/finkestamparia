@@ -2,7 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import Image from "next/image";
 
-export default function Footer() {
+export default function Rodape() {
   return (
     <>
       <footer className="footer footer-horizontal footer-center bg-[#101828] text-primary-content p-10">

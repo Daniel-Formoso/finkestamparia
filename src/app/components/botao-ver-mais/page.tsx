@@ -59,7 +59,7 @@ const products = [
       "Squeeze de alumínio personalizada, perfeita para se manter hidratado com estilo no Dia dos Pais.",
     features: [
       "Material: alumínio resistente",
-      "Capacidade: 500ml",
+      "Capacidade: 600ml",
       "Design exclusivo para o Dia dos Pais",
       "Leve e portátil, ideal para uso diário",
     ],

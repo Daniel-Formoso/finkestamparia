@@ -4,7 +4,7 @@ import AboutUs from "./components/sobre-nos/page";
 import Products from "./components/produtos/page";
 import Testimonials from "./components/depoimentos/page";
 import Contact from "./components/contato/page";
-import Footer from "./components/footer/page";
+import Rodape from "./components/rodape/page";
 import BackToTop from "./components/botao-voltar-topo/page";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
       <Products />
       <Testimonials />
       <Contact />
-      <Footer />
+      <Rodape/>
       <BackToTop />
     </div>
   );
